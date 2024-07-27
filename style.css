@@ -8,11 +8,10 @@ html {
 
 input {
   box-sizing: border-box;
-  background-color: antiquewhite;
   font-size: 50px;
   width: 320px;
   height: 130px;
-  background-color: #021526;
+  background-color: #1B1E32;
   color: white;
   text-align: end;
 }
@@ -27,9 +26,10 @@ header {
 }
 button {
   font-size: 30px;
-  background-color: #021526;
+  background-color: #353B50;
   color: white;
   border: solid 0.5px #50728b;
+  border-radius: 10px;
   cursor: pointer;
 }
 .header {
@@ -49,12 +49,14 @@ button {
 .equal {
   grid-column: 4 / -1;
   grid-row: -1 / 5;
+  background-color:#4CC2FE ;
+  color: #021526;
 }
 .cero {
   grid-column: 2;
 }
 .color {
-  background-color: #50728b;
+  background-color: #1B1E32;
 }
 .clean {
   grid-column: 1;

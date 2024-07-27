@@ -25,7 +25,7 @@ calculatorEl.addEventListener("click", function (event) {
     inputValue.value += event.target.textContent;
   }
   else if(event.target.classList.contains("divide")){
-    inputValue.value += event.target.textContent;
+    inputValue.value += "/"
   }
   else if(event.target.classList.contains("percentage")){
     inputValue.value += event.target.textContent;
@@ -43,6 +43,7 @@ calculatorEl.addEventListener("click", function (event) {
     }
     catch(error){
         inputValue.value = "Error"
+        
     }
     
   }else if(event.target.classList.contains("delete")){
