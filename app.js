@@ -11,45 +11,37 @@ const dotBtn = document.querySelector(".dot");
 const equalBtn = document.querySelector(".equal");
 const timesBtn = document.querySelector(".times");
 
-
 calculatorEl.addEventListener("click", function (event) {
   if (event.target.classList.contains("numbers")) {
     const numberValue = event.target.textContent;
     const numericValue = Number(numberValue);
-    inputValue.value += numericValue
-    currentValue = inputValue.value
-  }else if(event.target.classList.contains("dot")){
+    inputValue.value += numericValue;
+    currentValue = inputValue.value;
+  } else if (event.target.classList.contains("dot")) {
     inputValue.value += event.target.textContent;
-  }
-  else if(event.target.classList.contains("plus")){
+  } else if (event.target.classList.contains("plus")) {
     inputValue.value += event.target.textContent;
-  }
-  else if(event.target.classList.contains("divide")){
-    inputValue.value += "/"
-  }
-  else if(event.target.classList.contains("percentage")){
+  } else if (event.target.classList.contains("divide")) {
+    inputValue.value += "/";
+  } else if (event.target.classList.contains("percentage")) {
     inputValue.value += event.target.textContent;
-  }else if(event.target.classList.contains("times")){
-    inputValue.value += "**"
-  }else if(event.target.classList.contains("por")){
+  } else if (event.target.classList.contains("times")) {
+    inputValue.value += "**";
+  } else if (event.target.classList.contains("por")) {
     inputValue.value += event.target.textContent;
-  }else if(event.target.classList.contains("minus")){
+  } else if (event.target.classList.contains("minus")) {
     inputValue.value += event.target.textContent;
-  }else if(event.target.classList.contains("times")){
+  } else if (event.target.classList.contains("times")) {
     inputValue.value += event.target.textContent;
-  }else if(event.target.classList.contains("equal")){
-    try{
-        inputValue.value = eval(inputValue.value)
+  } else if (event.target.classList.contains("equal")) {
+    try {
+      inputValue.value = eval(inputValue.value);
+    } catch (error) {
+      inputValue.value = "Error";
     }
-    catch(error){
-        inputValue.value = "Error"
-        
-    }
-    
-  }else if(event.target.classList.contains("delete")){
+  } else if (event.target.classList.contains("delete")) {
     inputValue.value = inputValue.value.slice(0, -1);
-  }else if(event.target.classList.contains("clean")){
+  } else if (event.target.classList.contains("clean")) {
     inputValue.value = "";
   }
 });
-
